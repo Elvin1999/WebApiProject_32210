@@ -23,7 +23,7 @@ namespace WebApiProject.Services
         public Product Add(Product product)
         {
             var lastNumber = products.Count > 0 ? products.Max(x => x.Id) + 1 : 1;
-            product.Id = lastNumber;
+            product.Id = 0;
             products.Add(product);
             return product;
         }
